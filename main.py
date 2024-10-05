@@ -6,10 +6,13 @@ with (open("Program.tea", "r") as Pro):
     for line in g2:
 
         if "Python" in line:
-            commands = "\n".join (
-                g2[(g2.index("Python >>>", g2.index(line)) + 1) : g2.index("<<<", g2.index(line))]
-            )
-            exec(commands)
+            code = []
+            for i in g2[(e + 1): ]:
+                if i == "<<<":
+                    break
+                code.append(i)
+            command = "\n".join(code)
+            exec(command)
 
         if "only" in line:
             cond = line[4 : line.index(":")]
