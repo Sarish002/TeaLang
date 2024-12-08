@@ -1,0 +1,51 @@
+set name to steal | What is your name? |
+set age to steal | How old are you? |
+set age to int(age)
+
+set pro to steal | What is your profession? |
+set native to steal | Where are you from? |
+
+show "Here's a first line for you resume: "
+show f"I'm {name}, a {age} year old {pro} from {native}"
+
+Python >>>
+
+def diff():
+    print("Here's another one: ")
+    print("Aloha! I'm {name}, a {pro} from {native} of age {age}")
+
+    if input("Fine?") == "Y":
+        print("Great!")
+
+    else:
+        print("I'm sorry, but I couldn't find another one...")
+<<<
+
+set acceptance to steal | Was it nice? |
+only acceptance == "Y": show "Yay!"
+otherwise: diff()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
